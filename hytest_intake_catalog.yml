@@ -78,8 +78,8 @@ sources:
       consolidated: false
       storage_options:
         target_options:
-          requester-pays: true
+          requester_pays: true
         fo: 's3://nhgf-development/lcmap/lcmap.json'
         remote_options:
-          requester-pays: true
+          requester_pays: true
         remote_protocol: s3
