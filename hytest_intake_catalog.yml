@@ -33,6 +33,20 @@ sources:
   nwis-streamflow-usgs-gages-cloud:
     driver: zarr
     description: "Streamflow from NWIS, extracted and rechunked into time series (NWM2.1 time period)"
+    
+  lcmap-cloud:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'LCMAP, all 36 years'
+    args:
+      urlpath: "reference://"
+      consolidated: false
+      storage_options:
+        target_options:
+          requester-pays: true
+        fo: 's3://nhgf-development/lcmap/lcmap.json'
+        remote_options:
+          requester-pays: true
+        remote_protocol: s3
     args:
       urlpath: 's3://nhgf-development/nwm/nwis_chanobs.zarr'
       consolidated: true
