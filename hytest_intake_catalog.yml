@@ -83,3 +83,66 @@ sources:
         remote_options:
           requester_pays: true
         remote_protocol: s3
+  
+  gridmet-kerchunk-esip:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'Gridmet Kerchunked virtual dataset'
+    metadata:
+      tags:
+      - nhgf 
+      - water
+      - model_result
+      url: https://www.climatologylab.org/gridmet.html
+    args:
+      consolidated: False
+      urlpath: "reference://"
+      storage_options:
+        target_options:
+          requester_pays: true
+        fo: 's3://nhgf-development/gridmet/gridmet_combined.json'
+        remote_options:
+          requester_pays: true
+        remote_protocol: s3
+        
+
+  gridmet-kerchunk-esip-10x:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'Gridmet Kerchunked virtual dataset'
+    metadata:
+      tags:
+      - nhgf 
+      - water
+      - model_result
+      url: https://www.climatologylab.org/gridmet.html
+    args:
+      chunks:
+        day: 1220
+      consolidated: False
+      urlpath: "reference://"
+      storage_options:
+        target_options:
+          requester_pays: true
+        fo: 's3://nhgf-development/gridmet/gridmet_combined.json'
+        remote_options:
+          requester_pays: true
+        remote_protocol: s3
+        
+  gridmet-kerchunk-esip-100mb:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'Gridmet Kerchunked virtual dataset'
+    metadata:
+      tags:
+      - nhgf 
+      - water
+      - model_result
+      url: https://www.climatologylab.org/gridmet.html
+    args:
+      consolidated: False
+      urlpath: "reference://"
+      storage_options:
+        target_options:
+          requester_pays: true
+        fo: 's3://nhgf-development/gridmet/gridmet_combined.json'
+        remote_options:
+          requester_pays: true
+        remote_protocol: s3
