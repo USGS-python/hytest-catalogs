@@ -4,25 +4,18 @@ sources:
     driver: zarr
     description: "CONUS404 Hydro Variable subset, 40 years on Caldera on prem storage"
     args:
-      urlpath: '/caldera/projects/usgs/water/wbeep/conus404_work/zarr_out/conus404_hourly.zarr/'
+      urlpath: '/caldera/projects/usgs/water/wbeep/conus404_work/zarr_out/conus404_hourly.zarr'
       consolidated: true  
-  
-  conus404-2017-onprem:
+      
+  conus404-40year-cloud:
     driver: zarr
-    description: "CONUS404 Hydro Variable subset, water year 2017 on Caldera on prem storage"
+    description: "CONUS404 Hydro Variable subset, 40 years on cloud"    
     args:
-      urlpath: '/caldera/projects/usgs/hazards/cmgp/woodshole/rsignell/zarr/conus404_2017/'
-      consolidated: true
-
-  conus404-2017-cloud:
-    driver: zarr
-    description: "CONUS404 Hydro Variable subset, water year 2017 on AWS S3 cloud storage"
-    args:
-      urlpath: 's3://esip-qhub/usgs/conus404/hydro_vars/2017' 
+      urlpath: 's3://nhgf-development/conus404/conus404_hourly.zarr' 
       consolidated: true
       storage_options:
         requester_pays: true
-        
+  
   nwis-streamflow-usgs-gages-onprem:
     driver: zarr
     description: "Streamflow from NWIS, extracted and rechunked into time series (NWM2.1 time period)"
