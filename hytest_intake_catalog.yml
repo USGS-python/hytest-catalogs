@@ -15,7 +15,16 @@ sources:
       consolidated: true
       storage_options:
         requester_pays: true
-  
+
+  conus404-40year-daily-cloud:
+    driver: zarr
+    description: "CONUS404 Hydro Variable subset, exctracted to daily values, 40 years on cloud"    
+    args:
+      urlpath: 's3://nhgf-development/conus404/conus404_daily.zarr' 
+      consolidated: true
+      storage_options:
+        requester_pays: true
+
   nwis-streamflow-usgs-gages-onprem:
     driver: zarr
     description: "Streamflow from NWIS, extracted and rechunked into time series (NWM2.1 time period)"
