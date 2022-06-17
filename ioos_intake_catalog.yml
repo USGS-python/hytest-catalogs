@@ -1,0 +1,32 @@
+sources:
+  COAWST-Archive:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'COAWST Forecast Archive'
+    args:
+      urlpath: "reference://"
+      consolidated: false
+      storage_options:
+        target_options:
+          anon: true
+          client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
+        fo: 's3://rsignellbucket1/LiveOcean/archive.json'
+        remote_options:
+          anon: true
+          client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
+        remote_protocol: s3
+  LiveOcean-Archive:
+    driver: intake_xarray.xzarr.ZarrSource
+    description: 'LiveOcean Forecast Archive'
+    args:
+      urlpath: "reference://"
+      consolidated: false
+      storage_options:
+        target_options:
+          anon: true
+          client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
+        fo: 's3://rsignellbucket1/LiveOcean/archive.json'
+        remote_options:
+          anon: true
+          client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
+        remote_protocol: s3
+
