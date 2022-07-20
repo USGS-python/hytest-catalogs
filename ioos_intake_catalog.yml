@@ -23,10 +23,11 @@ sources:
       storage_options:
         target_options:
           anon: true
+          skip_instance_cache: True
           client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
         fo: 's3://rsignellbucket1/LiveOcean/archive.json'
         remote_options:
-          anon: true
-          client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
+          account_name: pm2
+          skip_instance_cache: True
         remote_protocol: s3
 
