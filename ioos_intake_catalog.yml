@@ -9,7 +9,7 @@ sources:
         target_options:
           anon: true
           client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
-        fo: 's3://rsignellbucket1/LiveOcean/archive.json'
+        fo: 's3://rsignellbucket1/COAWST/archive.json'
         remote_options:
           anon: true
           client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
