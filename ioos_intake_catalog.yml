@@ -13,7 +13,7 @@ sources:
         remote_options:
           anon: true
           client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
-        remote_protocol: s3
+        remote_protocol: "s3"
   LiveOcean-Archive:
     driver: intake_xarray.xzarr.ZarrSource
     description: 'LiveOcean Forecast Archive'
@@ -21,12 +21,12 @@ sources:
       urlpath: "reference://"
       consolidated: false
       storage_options:
-        remote_options:
+        target_options:
           anon: true
           skip_instance_cache: True
           client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
         fo: 's3://rsignellbucket1/LiveOcean/archive.json'
-        target_options:
-          account_name: pm2
+        remote_options:
+          account_name: "pm2"
           skip_instance_cache: True
-        remote_protocol: s3
+        remote_protocol: "abfs"
