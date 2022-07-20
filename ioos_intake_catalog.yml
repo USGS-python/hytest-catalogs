@@ -21,13 +21,12 @@ sources:
       urlpath: "reference://"
       consolidated: false
       storage_options:
-        target_options:
+        remote_options:
           anon: true
           skip_instance_cache: True
           client_kwargs: {'endpoint_url': 'https://mghp.osn.xsede.org'}
         fo: 's3://rsignellbucket1/LiveOcean/archive.json'
-        remote_options:
+        target_options:
           account_name: pm2
           skip_instance_cache: True
-        remote_protocol: abfs
-
+        remote_protocol: s3
